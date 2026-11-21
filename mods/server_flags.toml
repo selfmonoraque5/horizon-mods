@@ -32,6 +32,14 @@ categories = ["utility", "social"]
 tags = ["servers", "multiplayer", "flags", "country", "client-side"]
 
 [[versions]]
+version = "2.0.4"
+published = "2026-11-21"
+game = "26.3"
+file = "server_flags-2.0.4.hmod"
+sha256 = "b0e7a323a9c0cd5584dc5782b2323d384fa2edbffdec12ffe3c3fde6c7c00bd7"
+changelog = "Built for Nightly 2026-11-21 f037744. NAT64 addresses (64:ff9b::/96) count as the IPv4 address inside, and 64:ff9b:1::/48 as local, so a local server behind NAT64 is never looked up. Switching lookups off and on no longer restarts a server's retry count."
+
+[[versions]]
 version = "2.0.3"
 published = "2026-11-21"
 game = "26.3"
