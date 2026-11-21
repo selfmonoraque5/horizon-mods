@@ -29,12 +29,12 @@ categories = ["utility"]
 tags = ["maps", "tooltip", "inventory", "preview", "client-side"]
 
 [[versions]]
-version = "2.0.3"
+version = "2.0.4"
 published = "2026-11-21"
 game = "26.3"
-file = "map_preview-2.0.3.hmod"
-sha256 = "a0ff258960189293ac2927efcd14fcc3840f2b4693e542fcc7587ab58fb1ef39"
-changelog = "Built for Nightly 2026-11-21 f037744. A \"High\" slot picture now draws at most 64 x 64 cells instead of 128 x 128 (no visible difference up to GUI scale 4, a quarter of the work), and the tooltip picture is only drawn in the space this mod asked for."
+file = "map_preview-2.0.4.hmod"
+sha256 = "f3a5fc15abb56cf794e9c46c44472f1b5acb18078da652cbd186cc3a374fea4a"
+changelog = "Built for Nightly 2026-11-21 f037744. A \"High\" slot picture now draws at most 64 x 64 cells instead of 128 x 128 (no visible difference up to GUI scale 4, a quarter of the work), and the tooltip picture is only drawn for a map this mod reserved tooltip space for."
 
 [[versions]]
 version = "2.0.2"
