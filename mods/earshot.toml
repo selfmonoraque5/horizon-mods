@@ -18,7 +18,7 @@ Keys: V opens the voice menu, M mutes, N deafens; rebind them in Controls. Mods 
 
 **Network use:** when you join a server that runs Simple Voice Chat, Earshot asks it for a voice key over the game connection, then sends and receives encrypted voice over UDP to the address the server names (default port 24454). It contacts nothing else, and stays quiet on servers without Simple Voice Chat.
 
-**Platforms:** Windows and macOS for now. On Linux the launcher refuses it: its audio library uses ALSA there, which the game links too.
+**Platforms:** tested on Windows. macOS should work but is untested. On Linux the launcher refuses it: its audio library uses ALSA there, which the game links too.
 
 Works with Simple Voice Chat 2.6.27 (compatibility version 20), Fabric and Paper. Hosting voice on a Horizon dedicated server is off in this version, until its game patch is tested again (horizon-rust/horizon#18462 is fixed).
 
@@ -33,6 +33,14 @@ source = "https://github.com/selfmonoraque5/earshot"
 icon = "icons/earshot.png"
 categories = ["social", "utility"]
 tags = ["voice-chat", "proximity", "multiplayer", "audio", "simple-voice-chat"]
+
+[[versions]]
+version = "2.0.4"
+published = "2026-11-21"
+game = "26.3"
+file = "earshot-2.0.4.hmod"
+sha256 = "cf0b6ccbf67b506aa15674902b217bce292dcc9de41b5d80dd22a099c44b08bd"
+changelog = "Built for Nightly 2026-11-21 f037744. Review follow-ups: the vendored Opus decoder no longer has its OPUS_TRACE_PLC debug file trace; at most 64 players are decoded at once, so a server can't make it start a decoder per invented speaker; corrected the licence paths and the vendoring note. The entry now says only Windows is tested."
 
 [[versions]]
 version = "2.0.3"
