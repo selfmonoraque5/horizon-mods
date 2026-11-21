@@ -30,6 +30,14 @@ categories = ["utility", "decoration"]
 tags = ["first-person", "body", "camera", "immersion", "client-side"]
 
 [[versions]]
+version = "2.0.3"
+published = "2026-11-21"
+game = "26.3"
+file = "first_person_body-2.0.3.hmod"
+sha256 = "de31042f49007de5065ef0e28d2f3c6d6592eed00576bed026c93ebc223da471"
+changelog = "Built for Nightly 2026-11-21 f037744: the game functions it patches are unchanged from 8f83e5c. The README and code now note what else the game ties to the body being in view: flames on your body while burning, and other mods' first-person-only extras left out, as in third person; shadows are unchanged."
+
+[[versions]]
 version = "2.0.2"
 published = "2026-11-21"
 game = "26.3"
