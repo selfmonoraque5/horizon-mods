@@ -32,6 +32,14 @@ categories = ["utility", "social"]
 tags = ["servers", "multiplayer", "flags", "country", "client-side"]
 
 [[versions]]
+version = "2.0.3"
+published = "2026-11-21"
+game = "26.3"
+file = "server_flags-2.0.3.hmod"
+sha256 = "e2a0a26f7e1e2db7962c6976f0560630ebf15c71e9e287a53ff4cafc61e9d93b"
+changelog = "Built for Nightly 2026-11-21 8f83e5c: the game function it patches is unchanged from 5ef7734, so there are no code changes beyond 2.0.2's privacy fixes to the country lookup."
+
+[[versions]]
 version = "2.0.2"
 published = "2026-11-21"
 game = "26.3"
