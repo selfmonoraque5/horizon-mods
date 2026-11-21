@@ -29,6 +29,14 @@ categories = ["utility"]
 tags = ["maps", "tooltip", "inventory", "preview", "client-side"]
 
 [[versions]]
+version = "2.0.2"
+published = "2026-11-21"
+game = "26.3"
+file = "map_preview-2.0.2.hmod"
+sha256 = "971c047a909603ef46c57908a1bb6a5c21ed73bb0814f0a6d1f589a1dd7db2e6"
+changelog = "Built for Nightly 2026-11-21 8f83e5c: the game function it patches is unchanged from 5ef7734, so there are no code changes. The package's Cargo.lock now names its own version."
+
+[[versions]]
 version = "2.0.1"
 published = "2026-11-20"
 game = "26.3"
