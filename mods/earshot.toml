@@ -16,7 +16,7 @@ Proximity voice chat for Horizon. Talk to the players near you on servers that r
 
 Keys: V opens the voice menu, M mutes, N deafens; rebind them in Controls. Mods > Earshot > Config has a voice chat switch and debug info.
 
-**Network use:** when you join a server that runs Simple Voice Chat, Earshot asks it for a voice key over the game connection, then sends and receives encrypted voice over UDP to the address the server names (default port 24454). It contacts nothing else, and stays quiet on servers without Simple Voice Chat.
+**Network use:** when you join a server that runs Simple Voice Chat, Earshot asks it for a voice key over the game connection, then sends and receives encrypted voice over UDP to the address the server names (default port 24454). It contacts nothing else, and stays quiet on servers without Simple Voice Chat. The microphone is opened only while voice chat is on and you're not muted, and only once a server's voice session or the mic test needs it.
 
 **Platforms:** tested on Windows. macOS should work but is untested. On Linux the launcher refuses it: its audio library uses ALSA there, which the game links too.
 
@@ -33,6 +33,14 @@ source = "https://github.com/selfmonoraque5/earshot"
 icon = "icons/earshot.png"
 categories = ["social", "utility"]
 tags = ["voice-chat", "proximity", "multiplayer", "audio", "simple-voice-chat"]
+
+[[versions]]
+version = "2.0.5"
+published = "2026-11-21"
+game = "26.3"
+file = "earshot-2.0.5.hmod"
+sha256 = "448ae61f2352bbc18f754d2beb411c2f1da4134494de2721609a376471675438"
+changelog = "The microphone is now really closed while you're muted (Windows no longer shows it in use), and playback keeps going; switching Voice chat off closes both. The mic test can't be started while muted or off. Contributed by TheApple05 (selfmonoraque5/earshot#1). Built for Nightly 2026-11-21 f037744."
 
 [[versions]]
 version = "2.0.4"
