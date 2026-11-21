@@ -30,6 +30,14 @@ categories = ["utility", "decoration"]
 tags = ["first-person", "body", "camera", "immersion", "client-side"]
 
 [[versions]]
+version = "2.0.2"
+published = "2026-11-21"
+game = "26.3"
+file = "first_person_body-2.0.2.hmod"
+sha256 = "c1f5093cca020c8547bd2d3eba41f5ab66604987b1aff5cd2d384666fc00bba8"
+changelog = "Built for Nightly 2026-11-21 8f83e5c: the game functions it patches are unchanged from 5ef7734, so there are no code changes. The package's Cargo.lock now names its own version."
+
+[[versions]]
 version = "2.0.1"
 published = "2026-11-20"
 game = "26.3"
