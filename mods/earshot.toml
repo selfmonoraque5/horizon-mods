@@ -35,6 +35,14 @@ categories = ["social", "utility"]
 tags = ["voice-chat", "proximity", "multiplayer", "audio", "simple-voice-chat"]
 
 [[versions]]
+version = "2.0.7"
+published = "2026-11-22"
+game = "26.3"
+file = "earshot-2.0.7.hmod"
+sha256 = "a6f6961b3c53feafb9cdb7df5ede7e89126d694a838ae3a5e8e93424c3a6efa4"
+changelog = "Earshot is now client-only, so you can join Horizon servers and friends' worlds that don't have it (2.0.6 and older were refused with \"These mods are not on this server: earshot\"). Its voice server part was already off. Nothing else changed."
+
+[[versions]]
 version = "2.0.6"
 published = "2026-11-21"
 game = "26.3"
