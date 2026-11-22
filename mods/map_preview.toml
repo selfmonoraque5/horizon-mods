@@ -27,6 +27,15 @@ source = "https://github.com/selfmonoraque5/map-preview"
 icon = "icons/map_preview.png"
 categories = ["utility"]
 tags = ["maps", "tooltip", "inventory", "preview", "client-side"]
+screenshots = ["screenshots/map_preview/1.jpg", "screenshots/map_preview/2.jpg"]
+
+[[versions]]
+version = "2.0.6"
+published = "2026-11-22"
+game = "26.3"
+file = "map_preview-2.0.6.hmod"
+sha256 = "b78ae677cf744d5229ec33b42a4bec78a05af2faabd9e3509e9ffd9dca0f2804"
+changelog = "Built for Nightly 2026-11-22 2b77287: the game function it patches is unchanged from f037744, so there are no code changes. The README now has screenshots."
 
 [[versions]]
 version = "2.0.5"
