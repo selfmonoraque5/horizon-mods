@@ -28,6 +28,15 @@ source = "https://github.com/selfmonoraque5/first-person-body"
 icon = "icons/first_person_body.png"
 categories = ["utility", "decoration"]
 tags = ["first-person", "body", "camera", "immersion", "client-side"]
+screenshots = ["screenshots/first_person_body/1.jpg", "screenshots/first_person_body/2.jpg"]
+
+[[versions]]
+version = "2.0.4"
+published = "2026-11-22"
+game = "26.3"
+file = "first_person_body-2.0.4.hmod"
+sha256 = "b24175a7348b3d9c1346f805389a8797eea1c56d7d13e249e98c845695852d5f"
+changelog = "Built for Nightly 2026-11-22 2b77287: the game functions it patches are unchanged from f037744, so there are no code changes. The README now has screenshots."
 
 [[versions]]
 version = "2.0.3"
