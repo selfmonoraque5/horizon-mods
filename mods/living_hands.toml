@@ -1,0 +1,40 @@
+id = "living_hands"
+kind = "native-mod"
+name = "Living Hands"
+summary = "Your first-person hands come alive, and your own arm holds what you carry"
+description = """
+Your first-person hands come alive. Held items bob with your steps, drop into a sprint, dip when you land and lift when you jump, and breathe while you stand still. Everything moves on springs, so it eases in and settles back instead of snapping.
+
+- **Your own arm holds the item**, with your skin, as the game shows it only for an empty hand (not for maps, which already show arms, or while invisible).
+- **Per-item swings**: a fist jabs, a sword cuts across, a trident or spear thrusts, tools chop down, a mace lifts and slams, a shield bashes.
+- **Walking bob, sprint pose, jump and landing**, and slow breathing while standing still.
+- **Actions**: food and drink are chewed, a drawn bow trembles, a raised shield is pushed out.
+- **Movement**: a breaststroke in water, hand over hand on ladders and vines, arms trailing on an elytra.
+- **Hurt flinch**, a little flip on **item switch**, and an optional **turning sway** (off by default, since Living Camera already sways the hand).
+
+Every effect has its own strength, plus overall intensity, in Mods > Living Hands > Config.
+
+Client side only: it works in single player and on any server. No network, file or process access beyond its own settings.
+
+The mod API can draw in the hand but doesn't say which texture is your skin, so besides the mod API this mod patches the start of Horizon's own hand_geometry to read your skin, whether your model is slim, your main hand and whether you're invisible; it changes nothing the game does. It works on the Horizon build it is made for. An API for this is requested in horizon#19904.
+
+Source: https://github.com/selfmonoraque5/living-hands
+
+Inspired by first-person animation mods such as Punchy! and Hold My Items. Written from scratch for Horizon: it contains none of their code, animations or assets and is not made or endorsed by their authors."""
+authors = ["selfmonoraque5"]
+owners = ["selfmonoraque5"]
+owner_ids = [86315101]
+license = "MIT"
+source = "https://github.com/selfmonoraque5/living-hands"
+icon = "icons/living_hands.png"
+categories = ["utility", "decoration"]
+tags = ["first-person", "hands", "animation", "immersion", "client-side", "arm"]
+screenshots = ["screenshots/living_hands/1.jpg", "screenshots/living_hands/2.jpg"]
+
+[[versions]]
+version = "1.0.0"
+published = "2026-11-22"
+game = "26.3"
+file = "living_hands-1.0.0.hmod"
+sha256 = "700a38af30f15578e086a59788baa6361ee09d768a7db1810ace47f6c76fb143"
+changelog = "First release, for Nightly 2026-11-22 2b77287."
