@@ -29,6 +29,14 @@ categories = ["utility"]
 tags = ["maps", "tooltip", "inventory", "preview", "client-side"]
 
 [[versions]]
+version = "2.0.5"
+published = "2026-11-22"
+game = "26.3"
+file = "map_preview-2.0.5.hmod"
+sha256 = "070e40f8677dd859f2241e0d7f555705d499634bcbef0015b24ed99842c5d52e"
+changelog = "Much lighter slot pictures: matching rows merge into one shape, each map's slot picture is kept instead of rebuilt every frame, and \"High\" draws 32 x 32 cells (with 34 maps in the inventory: about 45 FPS instead of 22). Tooltips no longer flicker when moving between maps, and the ID line no longer touches the picture. Contributed by FitchWorks (selfmonoraque5/map-preview#3). Built for Nightly 2026-11-21 f037744."
+
+[[versions]]
 version = "2.0.4"
 published = "2026-11-21"
 game = "26.3"
