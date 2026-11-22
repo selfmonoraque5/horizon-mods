@@ -16,7 +16,7 @@ Proximity voice chat for Horizon. Talk to the players near you on servers that r
 
 Keys: V opens the voice menu, M mutes, N deafens; rebind them in Controls. Mods > Earshot > Config has a voice chat switch and debug info.
 
-**Network use:** when you join a server that runs Simple Voice Chat, Earshot asks it for a voice key over the game connection, then sends and receives encrypted voice over UDP to the address the server names (default port 24454). It contacts nothing else, and stays quiet on servers without Simple Voice Chat. From 2.0.6, the microphone is opened only while voice chat is on and you're not muted, and only once a server's voice session or the mic test needs it; 2.0.4 and older keep it open while muted (nothing is sent).
+**Network use:** when you join a server that runs Simple Voice Chat, Earshot asks it for a voice key over the game connection, then sends and receives encrypted voice over UDP to the address the server names (default port 24454). It contacts nothing else, and stays quiet on servers without Simple Voice Chat. From 2.0.6, muting closes the microphone within a moment (tested on Windows), and it is only opened while voice chat is on and you're not muted, once a server's voice session or the mic test needs it. Nothing is ever sent while you're muted. 2.0.4 and older keep the microphone open while muted.
 
 **Platforms:** tested on Windows. macOS should work but is untested. On Linux the launcher refuses it: its audio library uses ALSA there, which the game links too.
 
@@ -40,7 +40,7 @@ published = "2026-11-21"
 game = "26.3"
 file = "earshot-2.0.6.hmod"
 sha256 = "1ad5b6d17535f9b678b7ebebb3c5f6b01090ba9756578312bade7f404fa4712d"
-changelog = "The microphone is now really closed while you're muted (Windows no longer shows it in use), and playback keeps going; switching Voice chat off closes both. A stream is only started after checking, under the same lock that muting takes, that it is still wanted, so the microphone never starts after you mute. The mic test can't be started while muted or off. Mute release contributed by TheApple05 (selfmonoraque5/earshot#1). Built for Nightly 2026-11-21 f037744."
+changelog = "Muting now closes the microphone within a moment (Windows stops listing it in use) while playback keeps going; switching Voice chat off closes both. Nothing is sent while you're muted. The mic test can't be started while muted or off. Mute release contributed by TheApple05 (selfmonoraque5/earshot#1). Built for Nightly 2026-11-21 f037744."
 
 [[versions]]
 version = "2.0.4"
