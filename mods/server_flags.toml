@@ -33,12 +33,12 @@ tags = ["servers", "multiplayer", "flags", "country", "client-side"]
 screenshots = ["screenshots/server_flags/1.jpg", "screenshots/server_flags/2.jpg"]
 
 [[versions]]
-version = "2.0.9"
+version = "2.0.10"
 published = "2026-11-23"
 game = "26.3"
-file = "server_flags-2.0.9.hmod"
-sha256 = "133bfb7b721db46ba7778f18f0283c00cdcccb56c31aa63c200c0c635049d875"
-changelog = "Only public addresses are ever looked up: an IPv6 site-local address could still be sent before; now any address that is not globally reachable unicast (your own network, site-local, multicast, documentation and other special-use ranges) never is. From 2.0.8: curl and nslookup run only from the system's own folders, never through PATH; each is stopped after a few seconds; at most four lookups run at once; the lookup setting is checked again before each step that sends anything. Built for Nightly 2026-11-22 f1bb66f."
+file = "server_flags-2.0.10.hmod"
+sha256 = "eeb46937c5d231a8d2e54e6a23764055192860ff53210309576c03185c359d55"
+changelog = "Only public addresses are ever looked up: an IPv6 site-local address could still be sent before; now any address that is not globally reachable unicast (your own network, site-local, multicast, documentation and other special-use ranges) never is, nor are 6to4 addresses, the IETF protocol block 2001::/23 or the old 192.88.99.0/24 relay range. From 2.0.8: curl and nslookup run only from the system's own folders, never through PATH; each is stopped after a few seconds; at most four lookups run at once; the lookup setting is checked again before each step that sends anything. Built for Nightly 2026-11-22 f1bb66f."
 
 [[versions]]
 version = "2.0.7"
