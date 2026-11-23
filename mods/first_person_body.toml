@@ -11,11 +11,11 @@ See your own body in first person. Look down and your torso, legs and feet are t
 - **Vanilla first-person hand** by default, or the model's own arms.
 - Steps aside while swimming, crawling, gliding with an elytra, riptide spinning, sleeping and in spectator.
 
-Settings in Mods > First Person Body > Config: on/off, arms, body offset, while riding, lean back looking down, and a toggle key.
+Settings in Mods > First Person Body > Config: on/off, arms, body offset, while riding, lean back looking down, helmet in first person (hidden by default, from 2.0.6), and a toggle key.
 
 Client side only: works in single player and on any server. No network, file or process access beyond its own settings.
 
-Horizon has no hook for drawing your own player in first person, so besides the mod API this mod patches Horizon's own rendering functions (own_body_in_view, player_model_geometry, and the held-item, head-item, ear and cosmetic layers); the README lists each. They act only while your own first-person model is drawn. It works on the Horizon build it is made for.
+Horizon has no hook for drawing your own player in first person, so besides the mod API this mod patches Horizon's own rendering functions (own_body_in_view, player_model_geometry, and the held-item, head-item, ear and cosmetic layers, and from 2.0.6 the player's armour layers, to leave out a worn helmet); the README lists each. They act only while your own first-person model is drawn. It works on the Horizon build it is made for.
 
 Source: https://github.com/selfmonoraque5/first-person-body
 
@@ -29,6 +29,14 @@ icon = "icons/first_person_body.png"
 categories = ["utility", "decoration"]
 tags = ["first-person", "body", "camera", "immersion", "client-side"]
 screenshots = ["screenshots/first_person_body/1.jpg", "screenshots/first_person_body/2.jpg"]
+
+[[versions]]
+version = "2.0.6"
+published = "2026-11-23"
+game = "26.3"
+file = "first_person_body-2.0.6.hmod"
+sha256 = "f0c0c30f7d92217d747f60c71f3e860e08daea8f471183ed3f7c1244845e3ba6"
+changelog = "A worn helmet is no longer drawn around the camera in first person: new setting Helmet in first person (Hidden by default). The rest of the armour shows, and third person and the inventory keep the helmet. Built for Nightly 2026-11-22 f1bb66f."
 
 [[versions]]
 version = "2.0.5"
