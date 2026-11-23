@@ -8,12 +8,12 @@ A small flag beside each server in your Multiplayer list for the country it's ho
 - **Pixel-art flags** after each server's name, or on its icon when the name is long.
 - **67 drawn flags**, the countries servers are most often hosted in; any other country shows its two-letter code.
 - **Country name on hover**, like "Germany (DE)".
-- Servers on your own network are never looked up.
+- Private and local IP addresses are never sent to the country lookup service.
 - A grey **?** marks a server whose location can't be shown; hover it for why (an ad blocker blocking the lookup, DDoS protection, or a wrong address).
 
 Settings in Mods > Server Flags > Config: lookups on/off, flag position, hover tooltip, codes for countries without a flag.
 
-**Privacy:** to know where a server is, the mod resolves its address (first reading its Minecraft SRV record with the system's nslookup, as the game does when no port is given) and sends only that IP address to https://api.country.is (open source, no account or key), which answers with a country code. Once per server per game session, in the background, only while "Look up server locations" is on; a lookup that couldn't get through (an ad blocker, no connection) is tried again a minute later, three times at most, so the same IP can be sent up to three more times. Nothing about you, your account or your other servers is sent, and local-network addresses (also IPv4 written as IPv6) are never looked up. Switching the setting off stops new lookups; one already on its way may still finish. The request runs the system's curl with --disable, so the user's own curl config (.curlrc) is not used.
+**Privacy:** Location lookups are on by default. The mod resolves saved server hostnames through your configured DNS resolver. For a hostname with no explicit port, it first asks for a Minecraft SRV record using the system's `nslookup`. Eligible hostnames can be queried before the mod checks whether the resolved IP is local. For a public address, it sends only the resolved server IP to https://api.country.is (open source, no account or key) to get a country code. Local IPs, including IPv4 addresses written as IPv6, are never sent to that service. Lookups run in the background once per server per game session while "Look up server locations" is on. A failed lookup can retry up to three times, with one minute between attempts. Turning lookups off stops new jobs, and a job already in progress may finish. The country request uses `curl --disable` so it ignores your `.curlrc`.
 
 The request is made by the system's `curl` program (built into Windows 10 and 11, macOS and most Linux systems), run with only the service address and the server's IP. Rust's HTTPS libraries bring a second copy of a native library the game already has, which a mod may not link.
 
@@ -38,7 +38,7 @@ published = "2026-11-23"
 game = "26.3"
 file = "server_flags-2.0.7.hmod"
 sha256 = "c453ae02b03b82b82298f949ad6c92cbcc9ec5bbc79cc7854c7dbf17c14d6b2e"
-changelog = "Servers whose address only has a Minecraft SRV record (a bare domain like sagang.fun, with no address of its own) now get their flag instead of \"the address doesn't resolve\": the record is read first with the system's nslookup when no port is given, as the game does. Built for Nightly 2026-11-22 f1bb66f."
+changelog = "Servers whose address only has a Minecraft SRV record (a bare domain like sagang.fun, with no address of its own) now get their flag instead of \"the address doesn't resolve\": the record is read first with the system's nslookup when no port is given. Built for Nightly 2026-11-22 f1bb66f."
 
 [[versions]]
 version = "2.0.6"
