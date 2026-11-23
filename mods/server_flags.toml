@@ -33,6 +33,14 @@ tags = ["servers", "multiplayer", "flags", "country", "client-side"]
 screenshots = ["screenshots/server_flags/1.jpg"]
 
 [[versions]]
+version = "2.0.6"
+published = "2026-11-23"
+game = "26.3"
+file = "server_flags-2.0.6.hmod"
+sha256 = "516d3b6238f9cc3d9424af9cb31c10e2d968b0996bd0d5b828b16fe91fe7500c"
+changelog = "Built for Nightly 2026-11-22 f1bb66f: the game code it patches still accepts its patches, so there are no code changes."
+
+[[versions]]
 version = "2.0.5"
 published = "2026-11-22"
 game = "26.3"
