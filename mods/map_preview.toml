@@ -30,6 +30,14 @@ tags = ["maps", "tooltip", "inventory", "preview", "client-side"]
 screenshots = ["screenshots/map_preview/1.jpg", "screenshots/map_preview/2.jpg"]
 
 [[versions]]
+version = "2.0.7"
+published = "2026-11-23"
+game = "26.3"
+file = "map_preview-2.0.7.hmod"
+sha256 = "6e1099ac35460a4ac122c805e488b5843634fe9598f6ab430a814f942c0e368e"
+changelog = "Built for Nightly 2026-11-22 f1bb66f: the game code it patches still accepts its patches, so there are no code changes."
+
+[[versions]]
 version = "2.0.6"
 published = "2026-11-22"
 game = "26.3"
