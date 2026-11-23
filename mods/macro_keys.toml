@@ -8,7 +8,7 @@ Keys that send your chat messages and commands.
 - **12 macros**, each with up to **5 lines**: commands (`/home`) or chat messages.
 - **Three modes**: **send all** (in order, with a delay you choose between lines), **type in chat** (opens the chat with line 1 typed, like `/msg Steve `, for you to finish and send), or **one per press** (the next line each press, then back to the first).
 - **An in-game editor**: press **K** (rebind it in Controls). Bind each macro's key in Options > Controls > Macro Keys; Ctrl, Shift and Alt combinations work.
-- **Paced** to stay under the server's chat spam kick: messages wait rather than get you kicked, and anything still waiting is dropped when you leave a server.
+- **Paced** to stay under the server's chat spam kick: messages wait rather than get you kicked, and anything still waiting is dropped when you leave a server or the world changes (another server behind a proxy, or another dimension).
 - The macros are kept in `config/macro_keys.txt`, which you can also edit by hand.
 
 Client side only: it works in single player and on any server. **Network use:** it sends only what you put in your macros, as chat messages or commands to the server you are playing on, when you press their keys; it contacts nothing else. It reads and writes only its own file in `config/`.
@@ -27,9 +27,9 @@ tags = ["macros", "commands", "keybinds", "chat", "client-side", "hotkeys"]
 screenshots = ["screenshots/macro_keys/1.jpg", "screenshots/macro_keys/2.jpg", "screenshots/macro_keys/3.jpg"]
 
 [[versions]]
-version = "1.0.0"
+version = "1.0.1"
 published = "2026-11-23"
 game = "26.3"
-file = "macro_keys-1.0.0.hmod"
-sha256 = "d616980895e4c26a45d4891e769d9fd5e19f985d2366a7bbc37879fcf01e85ac"
-changelog = "First release, for Nightly 2026-11-22 f1bb66f: 12 macros of up to 5 lines (send all with a delay, type in chat, one per press), an in-game editor (K), spam-safe pacing."
+file = "macro_keys-1.0.1.hmod"
+sha256 = "411a5e2ed036b637bf1267f3f7a2091befeac9f79c0448cf34c81d63d371fd8f"
+changelog = "First release, for Nightly 2026-11-22 f1bb66f: 12 macros of up to 5 lines (send all with a delay, type in chat, one per press), an in-game editor (K), spam-safe pacing; nothing waiting is sent after you leave a server or the world changes."
