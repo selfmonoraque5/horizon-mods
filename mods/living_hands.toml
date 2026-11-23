@@ -32,6 +32,14 @@ tags = ["first-person", "hands", "animation", "immersion", "client-side", "arm"]
 screenshots = ["screenshots/living_hands/1.jpg", "screenshots/living_hands/2.jpg"]
 
 [[versions]]
+version = "1.0.1"
+published = "2026-11-23"
+game = "26.3"
+file = "living_hands-1.0.1.hmod"
+sha256 = "b11f05d96f5fd23727564131cf5465002937416aadc1d5082d61caa7b7262573"
+changelog = "Built for Nightly 2026-11-22 f1bb66f: the game code it patches still accepts its patches, so there are no code changes."
+
+[[versions]]
 version = "1.0.0"
 published = "2026-11-22"
 game = "26.3"
