@@ -1,0 +1,41 @@
+id = "blazematica"
+kind = "native-mod"
+name = "Blazematica"
+summary = "Schematics for Horizon: ghost blocks, a build checker, the materials list, area saving, Easy Place and a printer"
+description = """
+Schematics for Horizon. Load a schematic, see it as ghost blocks where you want to build it, and check your build against it as you go.
+
+- **Load** `.litematic` (versions 1 to 7), Sponge `.schem`, legacy `.schematic` and vanilla structure `.nbt` files from your schematics folder.
+- **Place** the ghost: move, rotate and mirror it, keep several placements, restored per world and dimension.
+- **Layers** along X, Y or Z, one at a time or everything above or below.
+- **Check** your build: missing, wrong and extra blocks are marked, with a progress line.
+- **Materials**: what the build needs, what's missing and what you carry.
+- **Save** an area as a `.litematic` with two corners.
+- **Easy Place** and an optional **printer** that places the missing blocks for you.
+
+Open it with M, or start with /lm help. Commands: /blazematica and /lm.
+
+Client side only. The printer and Easy Place place blocks the way a player does.
+
+The mod API can't draw this much geometry each frame or give a mod the game's full block models, so besides the mod API this mod adds a support module to Horizon's game code and patches four of its functions (the client tick, the world draw, the render needs and the play mouse); the manifest lists each. It works on the Horizon build it is made for.
+
+Source: https://github.com/selfmonoraque5/blazematica
+
+Ported by TheApple05 from Horizonmatica by keksi2k (https://github.com/keksi2k/horizonmatica, MIT), which it builds on and keeps the history of. On top of it: layers along X and Z, Java's modified UTF-8 in schematic text, bounded file reading and uncompressed .nbt. Its commands don't clash with Horizonmatica's, so both can be installed. Inspired by Litematica by masa and Sakura-Ryoko and Litematica Printer by aleksilassila: it contains none of their code or assets and is not made or endorsed by them, or by keksi2k."""
+authors = ["selfmonoraque5", "TheApple05", "keksi2k"]
+owners = ["selfmonoraque5"]
+owner_ids = [86315101]
+license = "MIT"
+source = "https://github.com/selfmonoraque5/blazematica"
+icon = "icons/blazematica.png"
+categories = ["utility"]
+tags = ["schematics", "litematica", "building", "printer", "material-list", "client-side"]
+screenshots = ["screenshots/blazematica/1.jpg", "screenshots/blazematica/2.jpg", "screenshots/blazematica/3.jpg"]
+
+[[versions]]
+version = "1.0.0"
+published = "2026-11-23"
+game = "26.3"
+file = "blazematica-1.0.0.hmod"
+sha256 = "084001e5c2c7aaa0033b5b61c3b233388dad030875ffe0c21a0c56b194f532cb"
+changelog = "First release, for Nightly 2026-11-22 f1bb66f."
