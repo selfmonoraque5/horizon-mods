@@ -40,12 +40,12 @@ tags = ["voice-chat", "proximity", "multiplayer", "audio", "simple-voice-chat", 
 screenshots = ["screenshots/earshot/1.jpg", "screenshots/earshot/2.jpg", "screenshots/earshot/3.jpg", "screenshots/earshot/4.jpg", "screenshots/earshot/5.jpg", "screenshots/earshot/6.jpg"]
 
 [[versions]]
-version = "2.1.1"
+version = "2.1.2"
 published = "2026-11-23"
 game = "26.3"
-file = "earshot-2.1.1.hmod"
-sha256 = "a5b07d5c6a8c5c2a8760fcded2c664dfb5535cb5f54437a9636816da314ab82c"
-changelog = "Plasmo Voice support: Earshot also talks on servers running Plasmo Voice 2.x, found by itself (no whisper there: Plasmo Voice has none). With voice chat off, nothing is sent to a Plasmo Voice server; each connection uses a new key. The speaker icon beside name tags now shows. Other players' voices now come from where they stand on remote servers, and you no longer show up in your own Players list. Built for Nightly 2026-11-22 f1bb66f."
+file = "earshot-2.1.2.hmod"
+sha256 = "a961971f0de78de0f7cca92043eb812c0a32f4a6a2d16c695791266e2964181c"
+changelog = "Plasmo Voice support: Earshot also talks on servers running Plasmo Voice 2.x, found by itself (no whisper there: Plasmo Voice has none). With voice chat off, nothing is sent to a Plasmo Voice server; each connection uses a new key, and Simple Voice Chat and Plasmo Voice never share a connection or queued messages. The speaker icon beside name tags now shows. Other players' voices now come from where they stand on remote servers, and you no longer show up in your own Players list. Built for Nightly 2026-11-22 f1bb66f."
 
 [[versions]]
 version = "2.0.10"
