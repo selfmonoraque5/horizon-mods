@@ -35,6 +35,14 @@ tags = ["schematics", "litematica", "building", "printer", "material-list", "cli
 screenshots = ["screenshots/blazematica/1.jpg", "screenshots/blazematica/4.jpg", "screenshots/blazematica/5.jpg", "screenshots/blazematica/2.jpg", "screenshots/blazematica/3.jpg"]
 
 [[versions]]
+version = "1.1.3"
+published = "2026-11-23"
+game = "26.3"
+file = "blazematica-1.1.3.hmod"
+sha256 = "030bdec843822d0c5082e706791096cf9862e459fe7418e71bfdddf1d9b27612"
+changelog = "Builds together with Earshot 2.1: its libraries are locked to the exact versions the game uses (1.1.2's had drifted, and building both failed with \"the game graph must not move\"). No other changes. Built for Nightly 2026-11-22 f1bb66f."
+
+[[versions]]
 version = "1.1.2"
 published = "2026-11-23"
 game = "26.3"
