@@ -31,6 +31,14 @@ tags = ["first-person", "body", "camera", "immersion", "client-side"]
 screenshots = ["screenshots/first_person_body/1.jpg", "screenshots/first_person_body/2.jpg"]
 
 [[versions]]
+version = "2.0.5"
+published = "2026-11-23"
+game = "26.3"
+file = "first_person_body-2.0.5.hmod"
+sha256 = "35a03fe545a4e05ed87139046313bb713bb70d0f71f8dbacbda0e4009aa6717b"
+changelog = "Built for Nightly 2026-11-22 f1bb66f: the game code it patches still accepts its patches, so there are no code changes."
+
+[[versions]]
 version = "2.0.4"
 published = "2026-11-22"
 game = "26.3"
