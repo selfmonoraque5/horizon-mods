@@ -1,9 +1,9 @@
 id = "earshot"
 kind = "native-mod"
 name = "Earshot"
-summary = "Proximity voice chat for servers running Simple Voice Chat: 3D voices, push to talk, whisper and voice groups"
+summary = "Proximity voice chat for servers running Simple Voice Chat or Plasmo Voice: 3D voices, push to talk, whisper and voice groups"
 description = """
-Proximity voice chat for Horizon. Talk to the players near you on servers that run **Simple Voice Chat**: with Java players using Simple Voice Chat, and with other Horizon players using Earshot.
+Proximity voice chat for Horizon. Talk to the players near you on servers that run **Simple Voice Chat** or **Plasmo Voice** 2.x: with Java players using either mod, and with other Horizon players using Earshot. Earshot finds which one the server has by itself.
 
 - **Proximity voice** with 3D audio: voices come from where players stand and fade with distance.
 - **Push to talk** (Mouse 4), held or toggled, or **voice activation** with an adjustable threshold and a live mic level.
@@ -12,11 +12,13 @@ Proximity voice chat for Horizon. Talk to the players near you on servers that r
 - **Voice groups**: create one (normal, open or isolated, with an optional password), join one with a click; a panel lists the members and lights up whoever is talking.
 - **Noise reduction**, **per-player volume**, **mute** and **deafen**.
 - A **mic icon** on the HUD, and a **speaker icon** beside other players' name tags while they talk.
-- Opus audio and AES-128-GCM encryption, as the server expects.
+- Opus audio and the encryption each server expects (AES-128-GCM for Simple Voice Chat; RSA key exchange and AES-128-CBC for Plasmo Voice).
+
+On Plasmo Voice servers, proximity voice, positions, push to talk, voice activation and mute work; Plasmo's own groups, broadcasts and addons aren't supported yet. Whisper and voice groups are Simple Voice Chat features.
 
 Keys: V opens the voice menu, M mutes, N deafens; rebind them in Controls. Mods > Earshot > Config has a voice chat switch and debug info.
 
-**Network use:** when you join a server that runs Simple Voice Chat, Earshot asks it for a voice key over the game connection, then sends and receives encrypted voice over UDP to the address the server names (default port 24454). It contacts nothing else, and stays quiet on servers without Simple Voice Chat. From 2.0.6, muting closes the microphone within a moment (tested on Windows), and it is only opened while voice chat is on and you're not muted, once a server's voice session or the mic test needs it. Nothing is ever sent while you're muted. 2.0.4 and older keep the microphone open while muted.
+**Network use:** when you join a server that runs Simple Voice Chat or Plasmo Voice, Earshot asks it for a voice key over the game connection (for Plasmo Voice, by sending a public key made fresh for each game session), then sends and receives encrypted voice over UDP to the address the server names (default port 24454 for Simple Voice Chat; Plasmo Voice servers name their own). It contacts nothing else, and stays quiet on servers without either. From 2.0.6, muting closes the microphone within a moment (tested on Windows), and it is only opened while voice chat is on and you're not muted, once a server's voice session or the mic test needs it. Nothing is ever sent while you're muted. 2.0.4 and older keep the microphone open while muted.
 
 **Platforms:** tested on Windows. macOS should work but is untested. On Linux the launcher refuses it: its audio library uses ALSA there, which the game links too.
 
@@ -24,7 +26,9 @@ Works with Simple Voice Chat 2.6.27 (compatibility version 20), Fabric and Paper
 
 Source: https://github.com/selfmonoraque5/earshot
 
-Earshot is an independent project, not affiliated with or endorsed by Simple Voice Chat or its author. It contains no Simple Voice Chat code or assets; its protocol support was worked out from our own network captures (PROTOCOL.md). Opus by opus-rs (BSD-3-Clause)."""
+Plasmo Voice support works on Plasmo Voice 2.1 and 2.2 (tested with 2.2.0-beta.4 on Paper).
+
+Earshot is an independent project, not affiliated with or endorsed by Simple Voice Chat, Plasmo Voice or their authors. It contains no Simple Voice Chat code or assets; its protocol support was worked out from our own network captures (PROTOCOL.md). Its Plasmo Voice support is written from the protocol in Plasmo Voice's LGPL-3.0 source, with thanks to its authors; Earshot's code is its own (PLASMO.md). Opus by opus-rs (BSD-3-Clause)."""
 authors = ["selfmonoraque5"]
 owners = ["selfmonoraque5"]
 owner_ids = [86315101]
@@ -32,8 +36,16 @@ license = "MIT AND BSD-3-Clause"
 source = "https://github.com/selfmonoraque5/earshot"
 icon = "icons/earshot.png"
 categories = ["social", "utility"]
-tags = ["voice-chat", "proximity", "multiplayer", "audio", "simple-voice-chat"]
-screenshots = ["screenshots/earshot/1.jpg", "screenshots/earshot/2.jpg", "screenshots/earshot/3.jpg"]
+tags = ["voice-chat", "proximity", "multiplayer", "audio", "simple-voice-chat", "plasmo-voice"]
+screenshots = ["screenshots/earshot/1.jpg", "screenshots/earshot/2.jpg", "screenshots/earshot/3.jpg", "screenshots/earshot/4.jpg", "screenshots/earshot/5.jpg"]
+
+[[versions]]
+version = "2.1.0"
+published = "2026-11-23"
+game = "26.3"
+file = "earshot-2.1.0.hmod"
+sha256 = "95fbb36cf0a0d5f4814ab05d8d5722d559a1a4bb9a45615afb3db38b28123110"
+changelog = "Plasmo Voice support: Earshot also talks on servers running Plasmo Voice 2.x, found by itself. Other players' voices now come from where they stand on remote servers (also on Simple Voice Chat servers), and you no longer show up in your own Players list. Built for Nightly 2026-11-22 f1bb66f."
 
 [[versions]]
 version = "2.0.10"
