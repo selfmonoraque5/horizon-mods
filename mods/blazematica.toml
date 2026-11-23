@@ -1,7 +1,7 @@
 id = "blazematica"
 kind = "native-mod"
 name = "Blazematica"
-summary = "Schematics for Horizon: ghost blocks, a build checker, the materials list, area saving, Easy Place and a printer"
+summary = "Schematics for Horizon: ghost blocks, a build checker, paste, hover info, the materials list, area saving, Easy Place and a printer"
 description = """
 Schematics for Horizon. Load a schematic, see it as ghost blocks where you want to build it, and check your build against it as you go.
 
@@ -11,17 +11,19 @@ Schematics for Horizon. Load a schematic, see it as ghost blocks where you want 
 - **Check** your build: missing, wrong and extra blocks are marked, with a progress line.
 - **Materials**: what the build needs, what's missing and what you carry.
 - **Save** an area as a `.litematic` with two corners.
+- **Paste** the whole build at once with /lm paste (single player with cheats, or as an operator).
+- **Hover info**: look at a block and the HUD says what should be there.
 - **Easy Place** and an optional **printer** that places the missing blocks for you.
 
 Open it with M, or start with /lm help. Commands: /blazematica and /lm.
 
-Client side only. The printer and Easy Place place blocks the way a player does.
+Client side only. The printer and Easy Place place blocks the way a player does; paste sends /setblock as your own commands, so the server decides whether you may.
 
 The mod API can't draw this much geometry each frame or give a mod the game's full block models, so besides the mod API this mod adds a support module to Horizon's game code and patches four of its functions (the client tick, the world draw, the render needs and the play mouse); the manifest lists each. It works on the Horizon build it is made for.
 
 Source: https://github.com/selfmonoraque5/blazematica
 
-Ported by TheApple05 from Horizonmatica by keksi2k (https://github.com/keksi2k/horizonmatica, MIT), which it builds on and keeps the history of. On top of it: layers along X and Z, Java's modified UTF-8 in schematic text, bounded file reading and uncompressed .nbt. Its commands don't clash with Horizonmatica's, so both can be installed. Inspired by Litematica by masa and Sakura-Ryoko and Litematica Printer by aleksilassila: it contains none of their code or assets and is not made or endorsed by them, or by keksi2k."""
+Ported by TheApple05 from Horizonmatica by keksi2k (https://github.com/keksi2k/horizonmatica, MIT), which it builds on and keeps the history of. On top of it: paste, hover info, layers along X and Z, Java's modified UTF-8 in schematic text, bounded file reading and uncompressed .nbt. Its commands don't clash with Horizonmatica's; to build both together, both have to be made for the same Nightly. Inspired by Litematica by masa and Sakura-Ryoko and Litematica Printer by aleksilassila: it contains none of their code or assets and is not made or endorsed by them, or by keksi2k."""
 authors = ["selfmonoraque5", "TheApple05", "keksi2k"]
 owners = ["selfmonoraque5"]
 owner_ids = [86315101]
@@ -30,12 +32,12 @@ source = "https://github.com/selfmonoraque5/blazematica"
 icon = "icons/blazematica.png"
 categories = ["utility"]
 tags = ["schematics", "litematica", "building", "printer", "material-list", "client-side"]
-screenshots = ["screenshots/blazematica/1.jpg", "screenshots/blazematica/2.jpg", "screenshots/blazematica/3.jpg"]
+screenshots = ["screenshots/blazematica/1.jpg", "screenshots/blazematica/4.jpg", "screenshots/blazematica/5.jpg", "screenshots/blazematica/2.jpg", "screenshots/blazematica/3.jpg"]
 
 [[versions]]
-version = "1.0.0"
+version = "1.1.0"
 published = "2026-11-23"
 game = "26.3"
-file = "blazematica-1.0.0.hmod"
-sha256 = "084001e5c2c7aaa0033b5b61c3b233388dad030875ffe0c21a0c56b194f532cb"
-changelog = "First release, for Nightly 2026-11-22 f1bb66f."
+file = "blazematica-1.1.0.hmod"
+sha256 = "df575880258905bbcae13d5198105572e9f7b07ffcda78c61e6e447e89254cd2"
+changelog = "First release, for Nightly 2026-11-22 f1bb66f: paste, hover info, bounded highlights, saves that never replace a file unless asked, and an overlay rebuilt after a graphics device reset."
