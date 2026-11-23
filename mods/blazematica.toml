@@ -35,9 +35,9 @@ tags = ["schematics", "litematica", "building", "printer", "material-list", "cli
 screenshots = ["screenshots/blazematica/1.jpg", "screenshots/blazematica/4.jpg", "screenshots/blazematica/5.jpg", "screenshots/blazematica/2.jpg", "screenshots/blazematica/3.jpg"]
 
 [[versions]]
-version = "1.1.0"
+version = "1.1.1"
 published = "2026-11-23"
 game = "26.3"
-file = "blazematica-1.1.0.hmod"
-sha256 = "df575880258905bbcae13d5198105572e9f7b07ffcda78c61e6e447e89254cd2"
-changelog = "First release, for Nightly 2026-11-22 f1bb66f: paste, hover info, bounded highlights, saves that never replace a file unless asked, and an overlay rebuilt after a graphics device reset."
+file = "blazematica-1.1.1.hmod"
+sha256 = "50f85f818040d367c1687a5599248e62f54354d87a676a73d6078193ac83cb6e"
+changelog = "First release, for Nightly 2026-11-22 f1bb66f: paste (only blocks the game knows), hover info, bounded highlights and HUD text, saves that never replace or half-write a file, and an overlay rebuilt after a graphics device reset."
