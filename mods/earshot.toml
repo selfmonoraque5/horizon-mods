@@ -11,14 +11,14 @@ Proximity voice chat for Horizon. Talk to the players near you on servers that r
 - **Whisper** (Mouse 5, held): only players close by hear you.
 - **Voice groups**: create one (normal, open or isolated, with an optional password), join one with a click; a panel lists the members and lights up whoever is talking.
 - **Noise reduction**, **per-player volume**, **mute** and **deafen**.
-- A **mic icon** on the HUD, and a **speaker icon** beside other players' name tags while they talk.
+- A **mic icon** on the HUD, and a **speaker icon** beside other players' name tags: green while they talk, red if they turned voice chat off, grey and crossed out if they have no voice chat.
 - Opus audio and the encryption each server expects (AES-128-GCM for Simple Voice Chat; RSA key exchange and AES-128-CBC for Plasmo Voice).
 
 On Plasmo Voice servers, proximity voice, positions, push to talk, voice activation and mute work; Plasmo's own groups, broadcasts and addons aren't supported yet. Whisper and voice groups are Simple Voice Chat features.
 
 Keys: V opens the voice menu, M mutes, N deafens; rebind them in Controls. Mods > Earshot > Config has a voice chat switch and debug info.
 
-**Network use:** when you join a server that runs Simple Voice Chat or Plasmo Voice, Earshot asks it for a voice key over the game connection (for Plasmo Voice, by sending a public key made fresh for each game session), then sends and receives encrypted voice over UDP to the address the server names (default port 24454 for Simple Voice Chat; Plasmo Voice servers name their own). It contacts nothing else, and stays quiet on servers without either. From 2.0.6, muting closes the microphone within a moment (tested on Windows), and it is only opened while voice chat is on and you're not muted, once a server's voice session or the mic test needs it. Nothing is ever sent while you're muted. 2.0.4 and older keep the microphone open while muted.
+**Network use:** when you join a server that runs Simple Voice Chat or Plasmo Voice, Earshot asks it for a voice key over the game connection (for Plasmo Voice, by sending a public key made new for each voice connection), then sends and receives encrypted voice over UDP to the address the server names (default port 24454 for Simple Voice Chat; Plasmo Voice servers name their own). It contacts nothing else, and stays quiet on servers without either. With voice chat off, Earshot doesn't register Plasmo Voice's channel or answer the server, and switching it off drops the Plasmo Voice connection, its key and anything not yet sent. From 2.0.6, muting closes the microphone within a moment (tested on Windows), and it is only opened while voice chat is on and you're not muted, once a server's voice session or the mic test needs it. Nothing is ever sent while you're muted. 2.0.4 and older keep the microphone open while muted.
 
 **Platforms:** tested on Windows. macOS should work but is untested. On Linux the launcher refuses it: its audio library uses ALSA there, which the game links too.
 
@@ -37,15 +37,15 @@ source = "https://github.com/selfmonoraque5/earshot"
 icon = "icons/earshot.png"
 categories = ["social", "utility"]
 tags = ["voice-chat", "proximity", "multiplayer", "audio", "simple-voice-chat", "plasmo-voice"]
-screenshots = ["screenshots/earshot/1.jpg", "screenshots/earshot/2.jpg", "screenshots/earshot/3.jpg", "screenshots/earshot/4.jpg", "screenshots/earshot/5.jpg"]
+screenshots = ["screenshots/earshot/1.jpg", "screenshots/earshot/2.jpg", "screenshots/earshot/3.jpg", "screenshots/earshot/4.jpg", "screenshots/earshot/5.jpg", "screenshots/earshot/6.jpg"]
 
 [[versions]]
-version = "2.1.0"
+version = "2.1.1"
 published = "2026-11-23"
 game = "26.3"
-file = "earshot-2.1.0.hmod"
-sha256 = "95fbb36cf0a0d5f4814ab05d8d5722d559a1a4bb9a45615afb3db38b28123110"
-changelog = "Plasmo Voice support: Earshot also talks on servers running Plasmo Voice 2.x, found by itself. Other players' voices now come from where they stand on remote servers (also on Simple Voice Chat servers), and you no longer show up in your own Players list. Built for Nightly 2026-11-22 f1bb66f."
+file = "earshot-2.1.1.hmod"
+sha256 = "a5b07d5c6a8c5c2a8760fcded2c664dfb5535cb5f54437a9636816da314ab82c"
+changelog = "Plasmo Voice support: Earshot also talks on servers running Plasmo Voice 2.x, found by itself (no whisper there: Plasmo Voice has none). With voice chat off, nothing is sent to a Plasmo Voice server; each connection uses a new key. The speaker icon beside name tags now shows. Other players' voices now come from where they stand on remote servers, and you no longer show up in your own Players list. Built for Nightly 2026-11-22 f1bb66f."
 
 [[versions]]
 version = "2.0.10"
